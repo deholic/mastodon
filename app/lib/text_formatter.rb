@@ -13,6 +13,8 @@ class TextFormatter
     multiline: true,
   }.freeze
 
+  HASHTAG_AREA_REGEX = /^(#{Tag::HASHTAG_RE}\s?)+\z/i
+
   attr_reader :text, :options
 
   # @param [String] text
@@ -22,7 +24,7 @@ class TextFormatter
   # @option options [Boolean] :with_rel_me
   # @option options [Array<Account>] :preloaded_accounts
   def initialize(text, options = {})
-    @text    = text
+    @text    = strip_hashtag_area(text)
     @options = DEFAULT_OPTIONS.merge(options)
   end
 
@@ -162,5 +164,9 @@ class TextFormatter
 
   def preloaded_accounts?
     preloaded_accounts.present?
+  end
+
+  def strip_hashtag_area(text)
+    text.gsub(HASHTAG_AREA_REGEX, '')
   end
 end

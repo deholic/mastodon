@@ -273,7 +273,7 @@ RSpec.describe TextFormatter do
     end
 
     context 'when given text containing a hashtag' do
-      let(:text)  { '#hashtag' }
+      let(:text)  { 'foo #hashtag' }
 
       it 'creates a hashtag link' do
         expect(subject).to include '/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a>'
@@ -281,7 +281,7 @@ RSpec.describe TextFormatter do
     end
 
     context 'when given text containing a hashtag with Unicode chars' do
-      let(:text)  { '#hashtagタグ' }
+      let(:text)  { 'foo #hashtagタグ' }
 
       it 'creates a hashtag link' do
         expect(subject).to include '/tags/hashtag%E3%82%BF%E3%82%B0" class="mention hashtag" rel="tag">#<span>hashtagタグ</span></a>'
