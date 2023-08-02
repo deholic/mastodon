@@ -2,6 +2,10 @@
 nn:
   simple_form:
     hints:
+      account:
+        display_name: Ditt fulle navn eller ditt morsomme navn.
+        fields: Din hjemmeside, uttalelse, alder, eller alt annet du vil.
+        note: 'Du kan @nevne andre eller #emneknagger.'
       account_alias:
         acct: Angi brukarnamn@domene til brukaren du ynskjer å flytta frå
       account_migration:
@@ -130,6 +134,7 @@ nn:
         position: Høgare rolle avgjer konfliktløysing i visse situasjonar. Visse handlingar kan kun utførast på rollar med lågare prioritet
       webhook:
         events: Vel hendingar å senda
+        template: Skriv din egen JSON nyttelast ved å bruke variabel interpolering. La stå tom for standard JSON.
         url: Kvar hendingar skal sendast
     labels:
       account:
@@ -294,6 +299,7 @@ nn:
         usable: Gje tut lov til å nytta denne emneknaggen
       user:
         role: Rolle
+        time_zone: Tidssone
       user_role:
         color: Emblemfarge
         highlighted: Vis rolle som emblem på brukarprofil
@@ -302,6 +308,7 @@ nn:
         position: Prioritet
       webhook:
         events: Aktiverte hendingar
+        template: Nyttelast mal
         url: Endepunkts-URL
     'no': Nei
     not_recommended: Ikkje anbefalt

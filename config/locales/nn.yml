@@ -386,6 +386,11 @@ nn:
         cancel: Avbryt
         confirm: Suspender
         permanent_action: Å oppheve suspensjonen vil ikke gjenopprette noe data eller koblinger.
+        preamble_html: Du er i ferd med å suspendere <strong>%{domain}</strong> og dens underdomener.
+        remove_all_data: Dette vil fjerne alt innhold, medier og profildata for domenets kontoer på serveren din.
+        stop_communication: Serveren din vil slutte å kommunisere med disse serverne.
+        title: Bekreft domene blokkering for %{domain}
+        undo_relationships: Dette vil angre ethvert følgeforhold mellom kontoene til disse serverne og dine.
       created_msg: Domeneblokkering blir nå behandlet
       destroyed_msg: Domeneblokkering har nå blitt angret
       domain: Domene
@@ -735,6 +740,9 @@ nn:
       branding:
         preamble: Profileringa av tenaren din skil den frå andre tenarar i nettverket. Informasjonen kan bli vist ulike stadar, til dømes i Mastodon sitt web-grensesnitt, i eigne applikasjonar, i førehandsvisningar på andre nettsider, i meldingsappar og så bortetter. På grunn av dette er det best å halde informasjonen enkel, kort og treffande.
         title: Profilering
+      captcha_enabled:
+        desc_html: Dette er avhengig av eksterne skript fra hCaptcha, som kan være et sikkerhets- og personvernproblem.<strong> I tillegg kan dette gjøre registreringsprosessen betydelig mindre tilgjengelig for noen (spesielt funksjonshemmede) personer</strong>. Av disse grunnene bør du vurdere alternative tiltak som godkjenningsbasert eller invitasjonsbasert registrering.
+        title: Krev at nye brukere løser en CAPTCHA for å bekrefte kontoen sin
       content_retention:
         preamble: Styr korleis brukargenerert innhald blir lagra i Mastodon.
         title: Bevaring av innhald
@@ -762,6 +770,7 @@ nn:
           approved: Godkjenning kreves for påmelding
           none: Ingen kan melda seg inn
           open: Kven som helst kan melda seg inn
+      title: Serverinnstillinger
     site_uploads:
       delete: Slett opplasta fil
       destroyed_msg: Vellukka sletting av sideopplasting!
@@ -983,6 +992,8 @@ nn:
   auth:
     apply_for_account: Søk om ein konto
     captcha_confirmation:
+      help_html: Hvis du har problemer med å løse CAPTCHA, kan du komme i kontakt med oss via %{email} og vi kan hjelpe deg.
+      hint_html: Bare en ting til! Vi må bekrefte at du er et menneske (dette er slik at vi kan holde spam ute!). Løs CAPTCHA nedenfor og klikk "Fortsett".
       title: Sikkerhetskontroll
     confirmations:
       wrong_email_hint: Viss epostadressa er feil, kan du endra ho i kontoinnstillingane.
@@ -1239,12 +1250,14 @@ nn:
       bookmarks_html: Du skal til å <strong>byta ut bokmerka dine</strong> med opp til <strong>%{total_items} innlegg</strong> frå <strong>%{filename}</strong>.
       domain_blocking_html: Du skal til å <strong>byta ut domeneblokkeringslista di</strong> med opp til <strong>%{total_items} domene</strong> frå <strong>%{filename}</strong>.
       following_html: Du skal til å <strong>fylgja</strong> opp til <strong>%{total_items} brukarkontoar</strong> frå <strong>%{filename}</strong> og <strong>slutta å fylgja alle andre</strong>.
+      lists_html: Du er i ferd med å <strong>erstatte dine lister</strong> med innholdet i <strong>%{filename}</strong>. Inntil <strong>%{total_items} kontoer</strong> legges til i nye lister.
       muting_html: Du skal til å <strong>byta ut lista di over dempa brukarkontoar</strong> med opp til <strong>%{total_items} brukarkontoar</strong> frå <strong>%{filename}</strong>.
     preambles:
       blocking_html: Du skal til å <strong>blokkera</strong> opp til <strong>%{total_items} brukarkontoar</strong> frå <strong>%{filename}</strong>.
       bookmarks_html: Du skal til å leggja til opp til <strong>%{total_items} innlegg</strong> frå <strong>%{filename}</strong> til <strong>bokmerka dine</strong>.
       domain_blocking_html: Du skal til å <strong>blokkera</strong> opp til <strong>%{total_items} domene</strong> frå <strong>%{filename}</strong>.
       following_html: Du skal til å <strong>fylgja</strong> opp til <strong>%{total_items} brukarkontoar</strong> frå <strong>%{filename}</strong>.
+      lists_html: Du er i ferd med å legge inntil <strong>%{total_items} kontoer</strong> fra <strong>%{filename}</strong> til dine <strong>lister</strong>. Nye lister vil bli opprettet hvis det ikke finnes noen liste å legge til.
       muting_html: Du skal til å <strong>dempa</strong> opp til <strong>%{total_items} brukarkontoar</strong> frå <strong>%{filename}</strong>.
     preface: Du kan henta inn data som du har eksportert frå ein annan tenar, som t.d. ei liste over folka du fylgjer eller blokkerer.
     recent_imports: Siste importar
@@ -1261,6 +1274,7 @@ nn:
       bookmarks: Importerer bokmerke
       domain_blocking: Importerer blokkerte domene
       following: Importerer fylgde brukarkontoar
+      lists: Importerer lister
       muting: Importerer dempa brukarkontoar
     type: Type import
     type_groups:
@@ -1271,6 +1285,7 @@ nn:
       bookmarks: Bokmerker
       domain_blocking: Liste over blokkerte domene
       following: Fylgjeliste
+      lists: Lister
       muting: Dempeliste
     upload: Last opp
   invites:

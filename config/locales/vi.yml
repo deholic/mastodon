@@ -1592,7 +1592,7 @@ vi:
     show_more: Đọc thêm
     show_newer: Mới hơn
     show_older: Cũ hơn
-    show_thread: Trích nguyên văn
+    show_thread: Nội dung gốc
     title: '%{name}: "%{quote}"'
     visibilities:
       direct: Nhắn riêng
